@@ -200,10 +200,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29f125ee2ce4334b9b53fd9d2b92b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensitivity: {x: 10, y: 0.1}
+  Sensitivity: {x: 10, y: 10}
   YToRotate: {fileID: 1006023240746803430}
   YInputAxisName: Mouse Y
-  YBounds: {x: -90, y: 90}
+  YBounds: {x: -30, y: 20}
   XToRotate: {fileID: 1006023240997991991}
   XInputAxisName: Mouse X
 --- !u!114 &1006023240997991977
@@ -876,8 +876,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.0000001}
-  m_Center: {x: 0, y: 0, z: -0.00000011920929}
+  m_Size: {x: 3, y: 1.5, z: 5}
+  m_Center: {x: 0, y: 0.31, z: 0}
 --- !u!114 &1006023242033466416
 MonoBehaviour:
   m_ObjectHideFlags: 0
