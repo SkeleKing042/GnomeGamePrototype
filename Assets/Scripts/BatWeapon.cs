@@ -12,8 +12,13 @@ public class BatWeapon : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            GameObject go = Instantiate(HitEffects, transform.position, Quaternion.identity).transform.gameObject;
-            Destroy(go, 3);
+            float hpLeft = other.gameObject.GetComponent<EnemyGnomeAI>().ReciveDamage(1);
+            if (hpLeft > 0)
+            {
+                GameObject go = Instantiate(HitEffects, transform.position, Quaternion.identity).transform.gameObject;
+                Destroy(go, 3);
+            }
+            
         }
     }
 }

@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchToOrth",
+                    "type": "Button",
+                    "id": "2d580a35-1753-491e-b93d-19612fac3071",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -249,6 +258,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Dodge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb00a0aa-5578-41f0-b9a3-54dbbfe58d24",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchToOrth",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

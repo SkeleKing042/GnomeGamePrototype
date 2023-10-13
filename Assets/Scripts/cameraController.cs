@@ -24,10 +24,15 @@ public class cameraController : MonoBehaviour
     public string XInputAxisName;
 
     private Vector2 _angles;
+
+    private bool OrthagraphicMode;
+
+    public Animator CameraAnimator;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        OrthagraphicMode = Camera.main.orthographic;
     }
 
     // Update is called once per frame
@@ -45,5 +50,13 @@ public class cameraController : MonoBehaviour
 
         YToRotate.rotation = Quaternion.Euler(-_angles.y, YToRotate.rotation.eulerAngles.y, YToRotate.rotation.eulerAngles.z);
         XToRotate.rotation = Quaternion.Euler(XToRotate.rotation.eulerAngles.x, _angles.x, XToRotate.rotation.eulerAngles.z);
+    }
+
+    public void ToggleOrthMode()
+    {
+        if (!CameraAnimator.GetBool("Ortho"))
+            CameraAnimator.SetBool("Ortho", true);
+        else if (CameraAnimator.GetBool("Ortho"))
+            CameraAnimator.SetBool("Ortho", false);
     }
 }

@@ -39,21 +39,20 @@ public class PlayerMovment : MonoBehaviour
     }
     public void ToggleADSing()
     {
-        if (ADSing)
+        if (CameraController.GetBool("ADS"))
         {
             _movementModifier = 1f;
-            ADSing = false;
+            CameraController.SetBool("ADS", false);
         }
-        else
+        else if (!CameraController.GetBool("ADS"))
         {
             _movementModifier = 0.5f;
-            ADSing = true;
+            CameraController.SetBool("ADS", true);
         }
-        CameraController.SetBool("ADS", ADSing);
     }
     public void DodgeRoll()
     {
-        if (!ADSing)
+        if (!CameraController.GetBool("ADS"))
             _rb.AddForce(transform.forward * _movementInput.x * DodgeSpeed * _movementModifier + transform.right * _movementInput.y * DodgeSpeed * _movementModifier, ForceMode.Impulse);
     }
 }

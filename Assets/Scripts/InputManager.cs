@@ -31,6 +31,7 @@ public class InputManager : MonoBehaviour
     public UnityEvent AltFireAction = new UnityEvent();
     [Tooltip("Called when the \'Space\' key is pressed")]
     public UnityEvent DodgeAction = new UnityEvent();
+    public UnityEvent SwitchToOrthAction = new UnityEvent();
 
     void OnFire()
     {
@@ -56,5 +57,9 @@ public class InputManager : MonoBehaviour
     void OnDodge()
     {
         DodgeAction.Invoke();
+    }
+    void OnSwitchToOrth()
+    {
+        SwitchToOrthAction.Invoke();
     }
 }
